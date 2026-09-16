@@ -1,38 +1,33 @@
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/Adrew-Kirts/ha-capfile/main/assets/logo.png" width="110" alt="Capfile">
+<img src="https://raw.githubusercontent.com/Adrew-Kirts/ha-capfile/main/assets/logo.png" alt="Capfile" width="110" align="right">
 
 # Capfile pour Home Assistant
 
-**Votre consommation électrique Linky dans Home Assistant — avec jusqu'à 3 ans d'historique.**
+**Votre consommation électrique Linky dans Home Assistant — avec jusqu'à 3 ans d'historique dès l'installation.**
 
 [![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge&logo=home-assistant&logoColor=white)](https://hacs.xyz)
 [![Release](https://img.shields.io/github/v/release/Adrew-Kirts/ha-capfile?style=for-the-badge&color=41BDF5)](https://github.com/Adrew-Kirts/ha-capfile/releases)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.1+-41BDF5.svg?style=for-the-badge&logo=home-assistant&logoColor=white)](https://www.home-assistant.io)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-</div>
+La plupart des intégrations énergie partent de zéro : le tableau de bord se remplit au fil des mois.
+Capfile récupère l'historique déjà stocké par Enedis et l'injecte en statistiques long terme — le
+tableau de bord Énergie est **rempli dès la première synchronisation**.
 
----
+![Tableau de bord Énergie alimenté par Capfile](https://raw.githubusercontent.com/Adrew-Kirts/ha-capfile/main/assets/energy-dashboard.png)
+
+> Le tableau de bord Énergie standard de Home Assistant, configuré automatiquement par l'intégration.
+> Ici huit mois d'historique importés, répartis heures creuses / heures pleines, avec les coûts réels.
 
 ## Ce que ça fait
 
-L'intégration récupère vos données de consommation via l'API [Capfile](https://www.capfile.com) et les injecte
-directement dans Home Assistant — y compris **l'historique**, ce qui est la partie intéressante : le tableau de bord
-Énergie est rempli dès l'installation, sans attendre des mois d'accumulation.
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/Adrew-Kirts/ha-capfile/main/assets/energy-dashboard.png" alt="Tableau de bord Énergie alimenté par Capfile" width="100%">
-<sub>Le tableau de bord Énergie de Home Assistant, configuré automatiquement par l'intégration.<br>
-Ici huit mois d'historique importés, répartis heures creuses / heures pleines, avec les coûts réels.</sub>
-</div>
-<br>
-- **Historique complet** — jusqu'à 3 ans de relevés injectés en statistiques long terme
-- **Par cadran** — HP/HC, base, Tempo… énergie *et* coût, avec les libellés et couleurs de votre contrat
-- **Tableau de bord Énergie** configuré automatiquement
-- **Injection solaire** — les compteurs producteurs (P4) sont gérés
-- **Coûts réels** — prix du kWh et abonnement récupérés depuis votre contrat, modifiables à la main
-- **Thème assorti** généré avec les couleurs de vos cadrans
+| | |
+|---|---|
+| **Historique complet** | Jusqu'à 3 ans de relevés injectés en statistiques long terme |
+| **Par cadran** | HP/HC, base, Tempo… énergie *et* coût, avec les libellés et couleurs de votre contrat |
+| **Tableau de bord Énergie** | Configuré automatiquement, rien à brancher à la main |
+| **Injection solaire** | Les compteurs producteurs (P4) sont gérés |
+| **Coûts réels** | Prix du kWh et abonnement récupérés depuis votre contrat, modifiables |
+| **Thème assorti** | Généré avec les couleurs de vos cadrans |
 
 ### Entités créées
 
@@ -47,17 +42,15 @@ Plus une statistique long terme par cadran (énergie + coût) et une statistique
 
 ## Installation
 
-### Via HACS
+[![Installer via HACS](https://img.shields.io/badge/HACS-Installer%20via%20HACS-41BDF5?style=for-the-badge&logo=home-assistant&logoColor=white)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Adrew-Kirts&repository=ha-capfile&category=integration)
 
-1. HACS → menu ⋮ → **Dépôts personnalisés**
-2. URL : `https://github.com/Adrew-Kirts/ha-capfile` — catégorie : **Intégration**
-3. Chercher **Capfile**, télécharger
-4. Redémarrer Home Assistant
-5. **Paramètres → Appareils et services → Ajouter une intégration → Capfile**
+Ou manuellement dans HACS : menu ⋮ → **Dépôts personnalisés** → `https://github.com/Adrew-Kirts/ha-capfile`
+→ catégorie **Intégration** → chercher **Capfile** → télécharger → redémarrer Home Assistant.
 
-### Manuellement
+Puis **Paramètres → Appareils et services → Ajouter une intégration → Capfile**.
 
-Copier `custom_components/capfile/` dans le dossier `custom_components/` de votre configuration, puis redémarrer.
+**Sans HACS** — copiez `custom_components/capfile/` dans le dossier `custom_components/` de votre
+configuration, puis redémarrez Home Assistant.
 
 ## Configuration
 
@@ -72,18 +65,16 @@ Tout se passe dans l'interface, en trois étapes :
    configuration automatique du tableau de bord Énergie.
 
 Tout reste modifiable ensuite dans les options de l'intégration.
-
-La [documentation Capfile](https://www.capfile.com/capfile/ha/tuto/) détaille la création
-du compte et le rattachement de votre compteur.
+La [documentation Capfile](https://www.capfile.com/capfile/ha/tuto/) détaille la création du compte
+et le rattachement de votre compteur.
 
 ## Limitations connues
 
-- **Un seul compteur par installation.** L'intégration écrit ses statistiques sous des
-  identifiants qui ne contiennent pas le PRM. Configurer deux compteurs ferait écrire les
-  deux dans les mêmes statistiques, ce qui corrompt l'historique de manière irréversible.
-- Le thème généré nécessite `frontend: themes: !include_dir_merge_named themes/` dans
-  `configuration.yaml`.
+- **Un seul compteur par installation.** Les statistiques sont écrites sous des identifiants qui ne
+  contiennent pas le PRM : configurer deux compteurs les ferait écrire dans les mêmes statistiques.
+- Le thème généré nécessite `frontend: themes: !include_dir_merge_named themes/` dans `configuration.yaml`.
 - La synchronisation tourne une fois par jour ; les données Enedis ont un jour de décalage.
+- Service français uniquement (compteurs Linky, données Enedis).
 
 ## Support
 
@@ -95,38 +86,34 @@ du compte et le rattachement de votre compteur.
 ## Crédits
 
 L'intégration est développée par **[Capfile](https://www.capfile.com)**, qui fournit également l'API.
-Ce dépôt n'existe que pour la rendre installable via HACS, avec leur accord.
+Ce dépôt la reconditionne pour HACS avec leur accord. Le [tutoriel officiel](https://www.capfile.com/capfile/ha/tuto/)
+reste la référence côté compte et API.
 
-Le [tutoriel officiel Capfile](https://www.capfile.com/capfile/ha/tuto/) reste la référence côté compte et API.
-
----
+Les écarts avec l'archive distribuée par Capfile sont listés dans le [CHANGELOG](CHANGELOG.md).
 
 <details>
 <summary><b>English</b></summary>
 
 <br>
 
-**Capfile for Home Assistant** — French Linky electricity consumption data, with up to 3 years of history.
+**Capfile for Home Assistant** — French Linky electricity consumption, with up to 3 years of history.
 
-Capfile is a French service that retrieves smart meter (Linky) data from Enedis. This integration pulls that
-data into Home Assistant and injects it as long-term statistics, so the Energy dashboard is populated
-immediately instead of building up over months.
+Capfile is a French service that retrieves smart-meter (Linky) data from Enedis. Most energy
+integrations start from zero and fill up over months; this one imports the history Enedis already
+holds as long-term statistics, so the Energy dashboard is populated from the first sync.
 
-**Features** — full history import, per-tariff-period breakdown (peak/off-peak/Tempo) for both energy and cost,
-automatic Energy dashboard setup, solar injection support for prosumer meters, real contract pricing, and a
-generated theme matching your tariff colours.
+**Features** — full history import, per-tariff-period breakdown (peak/off-peak/Tempo) for energy and
+cost, automatic Energy dashboard setup, solar injection support for prosumer meters, real contract
+pricing, and a generated theme matching your tariff colours.
 
-**Install** — HACS → Custom repositories → `https://github.com/Adrew-Kirts/ha-capfile` → category Integration.
-Then add the integration from Settings. You need a Capfile API key and your PRM (14-digit meter number).
+**Install** — HACS → Custom repositories → `https://github.com/Adrew-Kirts/ha-capfile` → category
+Integration. Then add it from Settings. Sign-in is your Capfile login and password; the meter is
+picked from a list.
 
-**Note** — the service covers French Linky meters only.
+**Note** — French Linky meters only. One meter per installation (see Limitations above).
 
-The integration is developed by [Capfile](https://www.capfile.com). This repository packages it for HACS with
-their permission. Bugs with the integration go to GitHub issues; anything about your Capfile account belongs on
-their forum.
+The integration is developed by [Capfile](https://www.capfile.com); this repository packages it for
+HACS with their permission. Integration bugs go to GitHub issues; anything about your Capfile account
+belongs on their forum.
 
 </details>
-
-<div align="center">
-<sub>Intégration par <a href="https://www.capfile.com">Capfile</a> · packaging HACS par <a href="https://github.com/Adrew-Kirts">Ezra Strikwerda</a> · MIT</sub>
-</div>
