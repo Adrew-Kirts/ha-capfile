@@ -7,7 +7,7 @@
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.1+-41BDF5.svg?style=for-the-badge&logo=home-assistant&logoColor=white)](https://www.home-assistant.io)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-<img src="https://raw.githubusercontent.com/Adrew-Kirts/ha-capfile/main/assets/logo.png" alt="Capfile" width="110" align="right">
+<img src="https://raw.githubusercontent.com/Adrew-Kirts/ha-capfile/main/assets/logo.png" alt="Capfile" width="72" align="right">
 
 La plupart des intégrations énergie partent de zéro : le tableau de bord se remplit au fil des mois.
 Capfile récupère l'historique déjà stocké par Enedis et l'injecte en statistiques long terme — le
