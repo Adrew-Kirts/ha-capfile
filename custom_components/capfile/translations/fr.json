@@ -1,0 +1,104 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connexion à Capfile",
+        "description": "Entrez vos identifiants Capfile (login ou e-mail + mot de passe). Votre mot de passe ne sera pas stocké — seule la clé API sera conservée.",
+        "data": {
+          "login": "Identifiant (login ou e-mail)",
+          "password": "Mot de passe"
+        },
+        "data_description": {
+          "password": "Votre mot de passe ne sera pas stocké — seule la clé API sera conservée.",
+          "login": "Votre login Capfile (login ou e-mail)"
+        }
+      },
+      "meter": {
+        "title": "Sélectionnez le compteur à intégrer",
+        "description": "Choisissez le compteur que vous souhaitez intégrer dans Home Assistant.",
+        "data": {
+          "prm": "Compteur"
+        }
+      },
+      "prices": {
+        "title": "Vérifiez ou renseignez les tarifs",
+        "description": "**{site_name}** — PRM `{prm}`\n\nOffre : **{offer_name}** | Puissance souscrite : **{power_kva} kVA**\n\nCadrans : {cadrans}\n\n> Si des tarifs affichés sont à **0**, ils ne sont pas encore configurés dans Capfile. Saisissez vos valeurs contractuelles (visibles sur votre facture).",
+        "data": {
+          "price_1": "€/kWh",
+          "price_2": "€/kWh",
+          "price_3": "€/kWh",
+          "price_4": "€/kWh",
+          "price_5": "€/kWh",
+          "price_6": "€/kWh",
+          "price_7": "€/kWh",
+          "price_8": "€/kWh",
+          "price_9": "€/kWh",
+          "subscription_cost": "€/mois",
+          "auto_update_prices": "Mise à jour automatique des tarifs",
+          "auto_configure_energy": "Configurer automatiquement le dashboard Énergie"
+        },
+        "data_description": {
+          "price_1": "{label_1}",
+          "price_2": "{label_2}",
+          "price_3": "{label_3}",
+          "price_4": "{label_4}",
+          "price_5": "{label_5}",
+          "price_6": "{label_6}",
+          "price_7": "{label_7}",
+          "price_8": "{label_8}",
+          "price_9": "{label_9}",
+          "subscription_cost": "Abonnement mensuel",
+          "auto_update_prices": "Récupère et applique automatiquement les tarifs depuis Capfile",
+          "auto_configure_energy": "Ajoute vos statistiques de consommation au tableau de bord Énergie{energy_compat_note}"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossible de se connecter à l'API Capfile",
+      "invalid_auth": "Identifiants incorrects (login ou mot de passe invalide)",
+      "forbidden": "Accès refusé — compteur non autorisé ou historique indisponible",
+      "quota_exceeded": "Quota API dépassé, réessayez plus tard",
+      "no_meters": "Aucun compteur disponible pour cette clé API",
+      "unknown": "Erreur inattendue"
+    },
+    "abort": {
+      "already_configured": "Cette intégration est déjà configurée",
+      "action_required": "Une action est requise sur votre compte Capfile avant de pouvoir configurer ce compteur :\n\n{message}\n\n[Accéder à mon compte]({url})"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Vérifiez ou renseignez les tarifs",
+        "description": "Cadrans actifs : {cadrans}\n\nModifiez vos tarifs pour recalculer le coût estimé.",
+        "data": {
+          "price_1": "€/kWh",
+          "price_2": "€/kWh",
+          "price_3": "€/kWh",
+          "price_4": "€/kWh",
+          "price_5": "€/kWh",
+          "price_6": "€/kWh",
+          "price_7": "€/kWh",
+          "price_8": "€/kWh",
+          "price_9": "€/kWh",
+          "subscription_cost": "€/mois",
+          "auto_update_prices": "Mise à jour automatique des tarifs",
+          "auto_configure_energy": "Configurer automatiquement le dashboard Énergie"
+        },
+        "data_description": {
+          "price_1": "{label_1}",
+          "price_2": "{label_2}",
+          "price_3": "{label_3}",
+          "price_4": "{label_4}",
+          "price_5": "{label_5}",
+          "price_6": "{label_6}",
+          "price_7": "{label_7}",
+          "price_8": "{label_8}",
+          "price_9": "{label_9}",
+          "subscription_cost": "Abonnement mensuel",
+          "auto_configure_energy": "Ajoute vos statistiques de consommation au tableau de bord Énergie"
+        }
+      }
+    }
+  }
+}

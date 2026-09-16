@@ -1,0 +1,13 @@
+{
+  "domain": "capfile",
+  "name": "Capfile",
+  "after_dependencies": ["energy"],
+  "codeowners": ["@Adrew-Kirts"],
+  "config_flow": true,
+  "dependencies": ["recorder"],
+  "documentation": "https://github.com/Adrew-Kirts/ha-capfile",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Adrew-Kirts/ha-capfile/issues",
+  "requirements": [],
+  "version": "0.3.2"
+}

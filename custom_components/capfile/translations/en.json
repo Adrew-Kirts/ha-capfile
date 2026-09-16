@@ -1,0 +1,105 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sign in to Capfile",
+        "description": "Enter your Capfile credentials (login or e-mail + password). Your password will not be stored — only the API key will be kept.",
+        "data": {
+          "login": "Username (login or e-mail)",
+          "password": "Password"
+        },
+        "data_description": {
+          "password": "Your password will not be stored — only the API key will be kept.",
+          "login": "Your Capfile identifier (login or e-mail)"
+        }
+      },
+      "meter": {
+        "title": "Select the meter to integrate",
+        "description": "Choose the meter you want to integrate into Home Assistant.",
+        "data": {
+          "prm": "Meter"
+        }
+      },
+      "prices": {
+        "title": "Review or enter your tariffs",
+        "description": "**{site_name}** — PRM `{prm}`\n\nOffer: **{offer_name}** | Subscribed power: **{power_kva} kVA**\n\nRate periods: {cadrans}\n\n> If any price shows **0**, it is not yet configured in Capfile. Enter the values from your electricity contract.",
+        "data": {
+          "price_1": "€/kWh",
+          "price_2": "€/kWh",
+          "price_3": "€/kWh",
+          "price_4": "€/kWh",
+          "price_5": "€/kWh",
+          "price_6": "€/kWh",
+          "price_7": "€/kWh",
+          "price_8": "€/kWh",
+          "price_9": "€/kWh",
+          "subscription_cost": "€/month",
+          "auto_update_prices": "Automatic tariff updates",
+          "auto_configure_energy": "Automatically configure the Energy dashboard"
+        },
+        "data_description": {
+          "price_1": "{label_1}",
+          "price_2": "{label_2}",
+          "price_3": "{label_3}",
+          "price_4": "{label_4}",
+          "price_5": "{label_5}",
+          "price_6": "{label_6}",
+          "price_7": "{label_7}",
+          "price_8": "{label_8}",
+          "price_9": "{label_9}",
+          "subscription_cost": "Monthly subscription",
+          "auto_update_prices": "Automatically fetch and apply updated prices from Capfile",
+          "auto_configure_energy": "Adds your consumption statistics to the Energy dashboard{energy_compat_note}"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the Capfile API",
+      "invalid_auth": "Invalid credentials (wrong login or password)",
+      "forbidden": "Access denied — meter not authorized or history unavailable",
+      "quota_exceeded": "API quota exceeded, please try again later",
+      "no_meters": "No meters available for this API key",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "This integration is already configured",
+      "action_required": "An action is required on your Capfile account before this meter can be configured:\n\n{message}\n\n[Access my account]({url})"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Review or enter your tariffs",
+        "description": "Active rate periods: {cadrans}\n\nUpdate your prices to recalculate the estimated cost.",
+        "data": {
+          "price_1": "€/kWh",
+          "price_2": "€/kWh",
+          "price_3": "€/kWh",
+          "price_4": "€/kWh",
+          "price_5": "€/kWh",
+          "price_6": "€/kWh",
+          "price_7": "€/kWh",
+          "price_8": "€/kWh",
+          "price_9": "€/kWh",
+          "subscription_cost": "€/month",
+          "auto_update_prices": "Automatic tariff updates",
+          "auto_configure_energy": "Automatically configure the Energy dashboard"
+        },
+        "data_description": {
+          "price_1": "{label_1}",
+          "price_2": "{label_2}",
+          "price_3": "{label_3}",
+          "price_4": "{label_4}",
+          "price_5": "{label_5}",
+          "price_6": "{label_6}",
+          "price_7": "{label_7}",
+          "price_8": "{label_8}",
+          "price_9": "{label_9}",
+          "subscription_cost": "Monthly subscription",
+          "auto_update_prices": "Automatically fetch and apply updated prices from Capfile",
+          "auto_configure_energy": "Adds your consumption statistics to the Energy dashboard"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+name: Bug
+description: Signaler un problème avec l'intégration
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pour toute question liée à votre **compte Capfile** ou à vos **données de consommation**,
+        passez plutôt par le [forum Capfile](https://www.capfile.com/app/#/forum/home-assistant/integration-home-assistant).
+        Ce tracker concerne uniquement l'intégration Home Assistant.
+  - type: input
+    id: version
+    attributes:
+      label: Version de l'intégration
+      placeholder: "0.3.2"
+    validations:
+      required: true
+  - type: input
+    id: ha_version
+    attributes:
+      label: Version de Home Assistant
+      placeholder: "2026.9.0"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Que se passe-t-il ?
+      description: Décrivez le problème et ce que vous attendiez.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: >
+        Paramètres -> Système -> Journaux, filtrez sur `capfile`.
+        ⚠️ Les logs contiennent votre PRM (le numéro à 14 chiffres de votre compteur).
+        Remplacez-le par XXXXXXXXXXXXXX avant de coller.
+      render: shell

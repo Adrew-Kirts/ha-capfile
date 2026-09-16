@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions compte Capfile / données
+    url: https://www.capfile.com/app/#/forum/home-assistant/integration-home-assistant
+    about: Pour tout ce qui touche à votre compte ou vos données, le forum Capfile est le bon endroit.

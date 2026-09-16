@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+venv/
+.idea/
+.vscode/
+
+# never commit Home Assistant config or logs pulled in while debugging
+secrets.yaml
+.storage/
+home-assistant.log*
+home-assistant_v2.db*
+*.log
+.env
