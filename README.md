@@ -18,6 +18,8 @@ tableau de bord Énergie est **rempli dès la première synchronisation**.
 > Le tableau de bord Énergie standard de Home Assistant, configuré automatiquement par l'intégration.
 > Ici huit mois d'historique importés, répartis heures creuses / heures pleines, avec les coûts réels.
 
+<br>
+
 ## Ce que ça fait
 
 | | |
