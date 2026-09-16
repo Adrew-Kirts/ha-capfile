@@ -1,5 +1,3 @@
-<img src="https://raw.githubusercontent.com/Adrew-Kirts/ha-capfile/main/assets/logo.png" alt="Capfile" width="110" align="right">
-
 # Capfile pour Home Assistant
 
 **Votre consommation électrique Linky dans Home Assistant — avec jusqu'à 3 ans d'historique dès l'installation.**
@@ -8,6 +6,8 @@
 [![Release](https://img.shields.io/github/v/release/Adrew-Kirts/ha-capfile?style=for-the-badge&color=41BDF5)](https://github.com/Adrew-Kirts/ha-capfile/releases)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.1+-41BDF5.svg?style=for-the-badge&logo=home-assistant&logoColor=white)](https://www.home-assistant.io)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+
+<img src="https://raw.githubusercontent.com/Adrew-Kirts/ha-capfile/main/assets/logo.png" alt="Capfile" width="110" align="right">
 
 La plupart des intégrations énergie partent de zéro : le tableau de bord se remplit au fil des mois.
 Capfile récupère l'historique déjà stocké par Enedis et l'injecte en statistiques long terme — le
