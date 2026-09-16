@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/Adrew-Kirts/ha-capfile/main/assets/logo.png" alt="" width="38" align="top"> Capfile pour Home Assistant
+# <img src="https://raw.githubusercontent.com/Adrew-Kirts/ha-capfile/main/assets/logo.png" alt="" width="48" align="top"> Capfile pour Home Assistant
 
 **Votre consommation électrique Linky dans Home Assistant — avec jusqu'à 3 ans d'historique dès l'installation.**
 
