@@ -26,7 +26,7 @@ directement dans Home Assistant — y compris **l'historique**, ce qui est la pa
 <sub>Le tableau de bord Énergie de Home Assistant, configuré automatiquement par l'intégration.<br>
 Ici huit mois d'historique importés, répartis heures creuses / heures pleines, avec les coûts réels.</sub>
 </div>
-
+<br>
 - **Historique complet** — jusqu'à 3 ans de relevés injectés en statistiques long terme
 - **Par cadran** — HP/HC, base, Tempo… énergie *et* coût, avec les libellés et couleurs de votre contrat
 - **Tableau de bord Énergie** configuré automatiquement
@@ -90,7 +90,7 @@ du compte et le rattachement de votre compteur.
 | Sujet | Où |
 |---|---|
 | Bug ou souci avec l'intégration | [Issues GitHub](https://github.com/Adrew-Kirts/ha-capfile/issues) |
-| Compte Capfile, données, facturation | [Forum Capfile](https://www.capfile.com/app/#/forum/home-assistant/integration-home-assistant) |
+| Compte Capfile, données, ... | [Forum Capfile](https://www.capfile.com/app/#/forum/home-assistant/integration-home-assistant) |
 
 ## Crédits
 
