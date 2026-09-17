@@ -1,3 +1,5 @@
+[![Installer via HACS](https://img.shields.io/badge/HACS-Installer%20via%20HACS-41BDF5?style=for-the-badge&logo=home-assistant&logoColor=white)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Adrew-Kirts&repository=ha-capfile&category=integration)
+
 # <img src="https://raw.githubusercontent.com/Adrew-Kirts/ha-capfile/main/assets/logo.png" alt="" width="48" align="top"> Capfile pour Home Assistant
 
 **Votre consommation électrique Linky dans Home Assistant — avec jusqu'à 3 ans d'historique dès l'installation.**
